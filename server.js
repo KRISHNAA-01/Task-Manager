@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 8080
 app.use(morgan('tiny'));
 
 // mongodb connection
-connectDB();
+//connectDB();
 
 // parse request to body-parser
 app.use(bodyparser.urlencoded({ extended : true}))
@@ -32,4 +32,9 @@ app.use('/js', express.static(path.resolve(__dirname, "assets/js")))
 // load routers
 app.use('/', require('./server/routes/router'))
 
-app.listen(process.env.PORT||PORT, ()=> { console.log(`Server is running on http://localhost:${PORT}`)});
+//app.listen(process.env.PORT||PORT, ()=> { console.log(`Server is running on http://localhost:${PORT}`)});
+connectDB().then(() => {
+    app.listen(PORT, () => {
+        console.log("listening for requests");
+    })
+})
