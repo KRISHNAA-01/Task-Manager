@@ -1,20 +1,7 @@
 hello,
-I'm Krishna Bhise. thisis an application with express and mongodb.
-
-#### To Run this project:
-1.install all the dependencies using terminal command,
-```
-npm install
-```
-
-2.Then Create config.env file and create PORT and MONGO_URI Variable and specify Value.
-   here,we've used cloud mongodb for storing database
-   so, initializing you're own database is suggested .
-
-3.after that, to start the server,just type (in terminal)
-
-```
-nodemon server.js  
-```
+I'm Krishna Bhise. this is an application with Node-js, express and mongodb.
+ALSO ,I've tried to deploy it online ,but due to a different routing query than localhost, some part is yet to be fixed.
+Though you can have a look:
+### https://vast-tan-worm-tam.cyclic.app/
 
 
